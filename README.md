@@ -52,6 +52,8 @@ Main Features:
 - ⚡ State Management using BLoC / Cubit
 - 🔐 Persistent Login using SharedPreferences
 
+---
+
 
 ## 🛠 Tech Stack
 
