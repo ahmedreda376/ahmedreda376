@@ -26,6 +26,7 @@ Currently working on a Food Delivery App using Flutter with clean architecture a
 - 🧠 Strong understanding of Object Oriented Programming (OOP)
 - ⚡ Experience with State Management
 - 💾 Local Storage using Hive & SharedPreferences
+- 💡 SOLID Principles
 - 🚀 Currently building a Food Delivery App using Flutter
 - 🎯 Always learning and improving my skills
 
