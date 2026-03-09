@@ -50,8 +50,10 @@ Main Features:
 - 🛒 Add To Cart
 - 👤 User Login System
 - 💾 Local Database using Hive
+- 💡 SOLID Principles
 - ⚡ State Management using BLoC / Cubit
 - 🔐 Persistent Login using SharedPreferences
+
 
 ---
 
