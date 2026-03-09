@@ -55,7 +55,6 @@ Main Features:
 
 ---
 
-
 ## 🛠 Tech Stack
 
 ### 📱 Mobile Development
@@ -66,6 +65,7 @@ Main Features:
 ### 🧠 Programming Concepts
 
 ![OOP](https://img.shields.io/badge/OOP-Object%20Oriented%20Programming-blue?style=for-the-badge)
+![SOLID](https://img.shields.io/badge/SOLID-Principles-brightgreen?style=for-the-badge)
 
 ### ⚡ State Management
 
@@ -80,7 +80,8 @@ Main Features:
 ### 🛠 Tools
 
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
 ---
 
 ⭐ From Ahmed Reda
