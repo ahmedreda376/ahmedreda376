@@ -1,127 +1,122 @@
-# 👋 Hello! I'm Ahmed Reda
+👋 Hello! I'm Ahmed Reda
 
-🚀 Flutter Developer | Building Mobile Apps Every Day  
-📚 Learning, Coding, and Improving Consistently
+🚀 Flutter Developer | Mobile App Enthusiast
 
 Welcome to my GitHub profile!
+I am passionate about building modern mobile applications using Flutter and learning new technologies.
 
-I am passionate about building modern mobile applications using Flutter and continuously learning new technologies to improve my skills and create high-quality applications.
-
-Currently working on a Food Delivery App using Flutter using Clean Architecture, SOLID Principles, and State Management.
-
----
-
-## 🌐 Connect with Me
-
-[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ahmedreda376)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-reda-67575a3aa)
+Currently working on a Food Delivery App using Flutter with clean architecture and state management.
 
 ---
 
-## 👨‍💻 About Me
+🌐 Connect with Me
+
+""GitHub" (https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)" (https://github.com/ahmedreda376)
+
+""LinkedIn" (https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)" (https://www.linkedin.com/in/ahmed-reda-67575a3aa)
+
+---
+
+👨‍💻 About Me
 
 - 📱 Flutter Mobile App Developer
-- 💻 Passionate about building real-world applications
-- 🧠 Strong understanding of Object-Oriented Programming (OOP)
-- 💡 Applying SOLID Principles in projects
-- ⚡ Experience with State Management (BLoC / Cubit)
+- 💻 Passionate about building real world applications
+- 🧠 Strong understanding of Object Oriented Programming (OOP)
+- ⚡ Experience with State Management
 - 💾 Local Storage using Hive & SharedPreferences
-- 🔧 Version Control using Git & GitHub
+- 💡 SOLID Principles
 - 🚀 Currently building a Food Delivery App using Flutter
-- 🎯 Always learning and improving my development skills
+- 🎯 Always learning and improving my skills
 
 ---
 
-## 📊 GitHub Analytics
+📊 GitHub Stats
 
-<p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=ahmedreda376&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true"/>
-  
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmedreda376&layout=compact&theme=tokyonight&hide_border=true"/>
-</p>
+"Ahmed's GitHub stats" (https://github-readme-stats.vercel.app/api?username=ahmedreda376&show_icons=true&theme=dark)
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=ahmedreda376&theme=tokyonight&hide_border=true"/>
-</p>
+"GitHub Streak" (https://github-readme-streak-stats.herokuapp.com/?user=ahmedreda376&theme=dark)
 
 ---
 
-## 📈 Coding Activity
+🍔 Current Project
 
-- 🔥 Consistently learning and building Flutter projects
-- 🚀 Regular commits and continuous improvements
-- 📱 Focused on Mobile App Development with Flutter
-- 💡 Applying Clean Architecture & SOLID Principles
-- 🎯 Improving problem-solving and software design skills
-- 📚 Exploring new tools and technologies
+Food Delivery App (Flutter)
 
----
-
-## 🍔 Current Project
-
-### Food Delivery App (Flutter)
-
-#### Main Features
+Main Features:
 
 - 🍔 Food Menu
 - 🛒 Add To Cart
-- 👤 User Authentication
+- 👤 User Login System
 - 💾 Local Database using Hive
+- 💡 SOLID Principles
 - ⚡ State Management using BLoC / Cubit
-- 💡 Clean Architecture & SOLID Principles
 - 🔐 Persistent Login using SharedPreferences
 
 ---
 
-## 🛠 Tech Stack
+🛠 Tech Stack
 
-### 📱 Mobile Development
+📱 Mobile Development
 
-![Flutter](https://img.shields.io/badge/flutter-%2302569B.svg?style=for-the-badge&logo=flutter&logoColor=white)
+"Flutter" (https://img.shields.io/badge/flutter-%2302569B.svg?style=for-the-badge&logo=flutter&logoColor=white)
 
-![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
+"Dart" (https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
 
-### 🧠 Programming Concepts
+🧠 Programming Concepts
 
-![OOP](https://img.shields.io/badge/OOP-Object%20Oriented%20Programming-blue?style=for-the-badge)
+"OOP" (https://img.shields.io/badge/OOP-Object%20Oriented%20Programming-blue?style=for-the-badge)
 
-![SOLID](https://img.shields.io/badge/SOLID-Principles-brightgreen?style=for-the-badge)
+"SOLID" (https://img.shields.io/badge/SOLID-Principles-brightgreen?style=for-the-badge)
 
-### ⚡ State Management
+⚡ State Management
 
-![BLoC](https://img.shields.io/badge/BLoC-State%20Management-blueviolet?style=for-the-badge)
+"BLoC" (https://img.shields.io/badge/BLoC-State%20Management-blueviolet?style=for-the-badge)
 
-![Cubit](https://img.shields.io/badge/Cubit-State%20Management-purple?style=for-the-badge)
+"Cubit" (https://img.shields.io/badge/Cubit-State%20Management-purple?style=for-the-badge)
 
-### 💾 Local Storage
+💾 Local Storage
 
-![Hive](https://img.shields.io/badge/Hive-Lightweight%20Database-yellow?style=for-the-badge)
+"Hive" (https://img.shields.io/badge/Hive-Lightweight%20Database-yellow?style=for-the-badge)
 
-![SharedPreferences](https://img.shields.io/badge/SharedPreferences-Local%20Storage-orange?style=for-the-badge)
+"SharedPreferences" (https://img.shields.io/badge/SharedPreferences-Local%20Storage-orange?style=for-the-badge)
 
-### 🛠 Tools
+🛠 Tools
 
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+"Git" (https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
-![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-
----
-
-## 🏆 Goals for 2026
-
-- ✅ Build production-ready Flutter applications
-- ✅ Master State Management (BLoC / Cubit)
-- ✅ Learn CI/CD for Flutter projects
-- ✅ Publish apps on Google Play Store
-- ✅ Learn Backend Integration & APIs
-- ✅ Contribute to Open Source Projects
+"GitHub" (https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 ---
 
-### 💭 Favorite Quote
+📚 Currently Learning
 
-> "First, solve the problem. Then, write the code."
+- 🏗️ Clean Architecture
+- 🌐 RESTful APIs
+- 🔥 Firebase
+- ⚡ Supabase
+- 🚀 CI/CD
+- 🧪 Testing & Unit Testing
+- 📱 Advanced Flutter Development
+- 💡 Software Design Principles
+- 🔄 Git & GitHub Workflow
+- 🎯 Dependency Injection (GetIt)
+- 🧩 Design Patterns
+- ⚙️ App Performance Optimization
+- 🔐 Authentication & Security
+- 🌍 Responsive & Adaptive UI
+- 🎨 Flutter Animations
+
+---
+
+🏆 Future Goals
+
+- 🚀 Build Production-Ready Applications
+- 📦 Publish Apps on Google Play Store
+- 🌍 Develop Full-Stack Mobile Applications
+- 🤝 Contribute to Open Source Projects
+- 📈 Improve Problem Solving & Algorithms
+- 💼 Land a Professional Flutter Developer Role
+- 🎯 Become an Expert in Flutter Ecosystem
 
 ---
 
