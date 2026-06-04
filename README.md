@@ -5,23 +5,22 @@
 Welcome to my GitHub profile!
 I am passionate about building modern mobile applications using Flutter and learning new technologies.
 
-Currently working on a Food Delivery App using Flutter with clean architecture and state management.
+Currently working on a Food Delivery App using Flutter with Clean Architecture and State Management.
 
 ---
 
 🌐 Connect with Me
 
-""GitHub" (https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)" (https://github.com/ahmedreda376)
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ahmedreda376)
 
-""LinkedIn" (https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)" (https://www.linkedin.com/in/ahmed-reda-67575a3aa)
-
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-reda-67575a3aa)
 ---
 
 👨‍💻 About Me
 
 - 📱 Flutter Mobile App Developer
-- 💻 Passionate about building real world applications
-- 🧠 Strong understanding of Object Oriented Programming (OOP)
+- 💻 Passionate about building real-world applications
+- 🧠 Strong understanding of Object-Oriented Programming (OOP)
 - ⚡ Experience with State Management
 - 💾 Local Storage using Hive & SharedPreferences
 - 💡 SOLID Principles
@@ -58,9 +57,9 @@ Main Features:
 
 📱 Mobile Development
 
-"Flutter" (https://img.shields.io/badge/flutter-%2302569B.svg?style=for-the-badge&logo=flutter&logoColor=white)
+"Flutter" (https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 
-"Dart" (https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
+"Dart" (https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 
 🧠 Programming Concepts
 
@@ -76,15 +75,15 @@ Main Features:
 
 💾 Local Storage
 
-"Hive" (https://img.shields.io/badge/Hive-Lightweight%20Database-yellow?style=for-the-badge)
+"Hive" (https://img.shields.io/badge/Hive-Database-yellow?style=for-the-badge)
 
 "SharedPreferences" (https://img.shields.io/badge/SharedPreferences-Local%20Storage-orange?style=for-the-badge)
 
 🛠 Tools
 
-"Git" (https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+"Git" (https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git&logoColor=white)
 
-"GitHub" (https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+"GitHub" (https://img.shields.io/badge/GitHub-121011?style=for-the-badge&logo=github&logoColor=white)
 
 ---
 
