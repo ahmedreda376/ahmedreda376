@@ -11,16 +11,8 @@ Currently working on a **Food Delivery App** using Flutter with Clean Architectu
 
 ## 🌐 Connect with Me
 
-[
-
-![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-
-](https://github.com/ahmedreda376)
-[
-
-![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
-
-](https://www.linkedin.com/in/ahmed-reda-67575a3aa)
+<a href="https://github.com/ahmedreda376"><img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/ahmed-reda-67575a3aa"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 
 ---
 
@@ -39,17 +31,9 @@ Currently working on a **Food Delivery App** using Flutter with Clean Architectu
 
 ## 📊 GitHub Stats
 
+<img src="https://github-readme-stats.vercel.app/api?username=ahmedreda376&show_icons=true&theme=dark" alt="Ahmed's GitHub stats" />
 
-
-![Ahmed's GitHub stats](https://github-readme-stats.vercel.app/api?username=ahmedreda376&show_icons=true&theme=dark)
-
-
-
-
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ahmedreda376&theme=dark)
-
-
+<img src="https://streak-stats.demolab.com/?user=ahmedreda376&theme=dark" alt="GitHub Streak" />
 
 ---
 
@@ -73,68 +57,28 @@ Currently working on a **Food Delivery App** using Flutter with Clean Architectu
 
 ### 📱 Mobile Development
 
-
-
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-
-
-
-
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-
-
+<img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" />
+<img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" />
 
 ### 🧠 Programming Concepts
 
-
-
-![OOP](https://img.shields.io/badge/OOP-Object%20Oriented%20Programming-blue?style=for-the-badge)
-
-
-
-
-![SOLID](https://img.shields.io/badge/SOLID-Principles-brightgreen?style=for-the-badge)
-
-
+<img src="https://img.shields.io/badge/OOP-Object%20Oriented%20Programming-blue?style=for-the-badge" />
+<img src="https://img.shields.io/badge/SOLID-Principles-brightgreen?style=for-the-badge" />
 
 ### ⚡ State Management
 
-
-
-![BLoC](https://img.shields.io/badge/BLoC-State%20Management-blueviolet?style=for-the-badge)
-
-
-
-
-![Cubit](https://img.shields.io/badge/Cubit-State%20Management-purple?style=for-the-badge)
-
-
+<img src="https://img.shields.io/badge/BLoC-State%20Management-blueviolet?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Cubit-State%20Management-purple?style=for-the-badge" />
 
 ### 💾 Local Storage
 
-
-
-![Hive](https://img.shields.io/badge/Hive-Database-yellow?style=for-the-badge)
-
-
-
-
-![SharedPreferences](https://img.shields.io/badge/SharedPreferences-Local%20Storage-orange?style=for-the-badge)
-
-
+<img src="https://img.shields.io/badge/Hive-Database-yellow?style=for-the-badge" />
+<img src="https://img.shields.io/badge/SharedPreferences-Local%20Storage-orange?style=for-the-badge" />
 
 ### 🛠 Tools
 
-
-
-![Git](https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git&logoColor=white)
-
-
-
-
-![GitHub](https://img.shields.io/badge/GitHub-121011?style=for-the-badge&logo=github&logoColor=white)
-
-
+<img src="https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git&logoColor=white" />
+<img src="https://img.shields.io/badge/GitHub-121011?style=for-the-badge&logo=github&logoColor=white" />
 
 ---
 
