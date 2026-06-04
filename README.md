@@ -35,9 +35,6 @@ Currently working on a **Food Delivery App** using Flutter with Clean Architectu
 ---
 
 
-![Ahmed's GitHub stats](https://github-readme-stats.vercel.app/api?username=ahmedreda376&show_icons=true&theme=dark)
-
-
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ahmedreda376&theme=dark)
 
 
