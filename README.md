@@ -1,4 +1,4 @@
-👋 Hello! I'm Ahmed Reda
+# 👋 Hello! I'm Ahmed Reda
 
 🚀 Flutter Developer | Mobile App Enthusiast
 
@@ -9,17 +9,23 @@ Currently working on a Food Delivery App using Flutter with clean architecture a
 
 ---
 
-
 ## 🌐 Connect with Me
 
-[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ahmedreda376)
+[
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-reda-67575a3aa)
+![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
+](https://github.com/ahmedreda376)
+
+[
+
+![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
+
+](https://www.linkedin.com/in/ahmed-reda-67575a3aa)
 
 ---
 
-👨‍💻 About Me
+## 👨‍💻 About Me
 
 - 📱 Flutter Mobile App Developer
 - 💻 Passionate about building real world applications
@@ -34,17 +40,41 @@ Currently working on a Food Delivery App using Flutter with clean architecture a
 
 ## 📊 GitHub Stats
 
-![Ahmed's GitHub stats](https://github-readme-stats.vercel.app/api?username=ahmedreda376&show_icons=true&theme=dark)
+<div align="center">
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ahmedreda376&theme=dark)
+
+
+![Ahmed's GitHub stats](https://github-readme-stats.vercel.app/api?username=ahmedreda376&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github)
+
+
+
+
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ahmedreda376&theme=tokyonight&hide_border=true)
+
+
+
+
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ahmedreda376&layout=compact&theme=tokyonight&hide_border=true&langs_count=6)
+
+
+
+
+
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=ahmedreda376&theme=tokyo-night&hide_border=true&area=true)
+
+
+
+</div>
 
 ---
 
-🍔 Current Project
+## 🍔 Current Project
 
-Food Delivery App (Flutter)
+### Food Delivery App (Flutter)
 
-Main Features:
+**Main Features:**
 
 - 🍔 Food Menu
 - 🛒 Add To Cart
@@ -54,35 +84,74 @@ Main Features:
 - ⚡ State Management using BLoC / Cubit
 - 🔐 Persistent Login using SharedPreferences
 
-
 ---
 
 ## 🛠 Tech Stack
 
 ### 📱 Mobile Development
 
+
+
 ![Flutter](https://img.shields.io/badge/flutter-%2302569B.svg?style=for-the-badge&logo=flutter&logoColor=white)
+
+
+
+
 ![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
+
+
 
 ### 🧠 Programming Concepts
 
+
+
 ![OOP](https://img.shields.io/badge/OOP-Object%20Oriented%20Programming-blue?style=for-the-badge)
+
+
+
+
 ![SOLID](https://img.shields.io/badge/SOLID-Principles-brightgreen?style=for-the-badge)
+
+
 
 ### ⚡ State Management
 
+
+
 ![BLoC](https://img.shields.io/badge/BLoC-State%20Management-blueviolet?style=for-the-badge)
+
+
+
+
 ![Cubit](https://img.shields.io/badge/Cubit-State%20Management-purple?style=for-the-badge)
+
+
 
 ### 💾 Local Storage
 
+
+
 ![Hive](https://img.shields.io/badge/Hive-Lightweight%20Database-yellow?style=for-the-badge)
+
+
+
+
 ![SharedPreferences](https://img.shields.io/badge/SharedPreferences-Local%20Storage-orange?style=for-the-badge)
+
+
 
 ### 🛠 Tools
 
+
+
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+
+
+
+
 ![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+
 
 ---
 
