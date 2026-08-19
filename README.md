@@ -34,7 +34,9 @@ Currently working on a **Food Delivery App** using Flutter with Clean Architectu
 
 ---
 
-![Coding](https://images.unsplash.com/photo-1623479322729-28b25c16b011?auto=format&fit=crop&w=1200&q=80)
+<p align="center">
+  <img src="https://unpkg.com/simple-icons@v13/icons/flutter.svg" width="80" alt="Flutter">
+</p>
 
 ---
 
