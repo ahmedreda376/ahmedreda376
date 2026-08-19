@@ -34,9 +34,7 @@ Currently working on a **Food Delivery App** using Flutter with Clean Architectu
 
 ---
 
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ahmedreda376&theme=dark)
-
+![GitHub Streak](https://streak-stats.demolab.com/?user=ahmedreda376&theme=dark)
 
 ---
 
