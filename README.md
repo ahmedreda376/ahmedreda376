@@ -35,7 +35,10 @@ Currently working on a **Food Delivery App** using Flutter with Clean Architectu
 ---
 
 <p align="center">
-  <img src="https://storage.ghost.io/c/56/e6/56e6bee2-64b3-46fc-9f38-839cefa57dd7/content/images/size/w2000/2023/07/Flutter-feature.png" width="80" alt="Flutter">
+  <img 
+    src="https://storage.ghost.io/c/56/e6/56e6bee2-64b3-46fc-9f38-839cefa57dd7/content/images/size/w2000/2023/07/Flutter-feature.png" 
+    width="100%" 
+    alt="Flutter">
 </p>
 
 ---
