@@ -42,7 +42,7 @@ Currently working on a **Food Delivery App** using Flutter with Clean Architectu
     style="object-fit: cover; border-radius: 25px;"
     alt="Flutter">
 </p>
----
+
 
 ## 🍔 Current Project
 
