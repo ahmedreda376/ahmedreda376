@@ -83,8 +83,6 @@
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=ahmedreda376&bg_color=1a1b27&color=70a5fd&line=bf91f3&point=ffffff&area=true&hide_border=true&radius=12" width="100%" alt="GitHub activity graph"/>
-
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ahmedreda376/ahmedreda376/output/github-snake-dark.svg"/>
 <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ahmedreda376/ahmedreda376/output/github-snake.svg"/>
@@ -93,16 +91,6 @@
 
 <!-- Pacman contribution graph -->
 <img src="https://raw.githubusercontent.com/ahmedreda376/ahmedreda376/pacman-output/pacman-contribution-graph-dark.svg" width="100%" alt="Pacman contribution graph"/>
-
-</div>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=110&color=0:7F00FF,50:3A47D5,100:00D2FF&text=Visitors&fontSize=36&fontColor=ffffff&fontAlignY=42&animation=fadeIn" width="100%" alt="Visitors"/>
-
-<div align="center">
-
-<a href="https://s05.flagcounter.com/more/Kx8D">
-<img src="https://s05.flagcounter.com/count2/Kx8D/bg_0D1117/txt_FFFFFF/border_0D1117/columns_8/maxflags_40/viewers_Unique+Views+Per+Country/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter"/>
-</a>
 
 </div>
 
