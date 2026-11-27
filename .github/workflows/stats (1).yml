@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: profile-stats
+  cancel-in-progress: false
+
 jobs:
   summary-cards:
     runs-on: ubuntu-latest
@@ -28,6 +32,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           USERNAME: ${{ github.repository_owner }}
+      - name: Sync with remote
+        run: |
+          git stash --include-untracked
+          git pull --rebase origin main
+          git stash pop
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update 3D contribution graph"
