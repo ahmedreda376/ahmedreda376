@@ -2,7 +2,7 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */2 * * *"
   workflow_dispatch:
   push:
     branches:
@@ -20,7 +20,7 @@ jobs:
 
       - name: Generate 3D snake SVGs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: python3 .github/workflows/snake3d.py "${{ github.repository_owner }}" dist
 
       - name: Push to output branch
