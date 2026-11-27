@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Flat GitHub contribution board (classic look) + a 3D-looking animated snake.
+"""GitHub contribution board + Google-Snake-style animated snake (rainbow body, blue head).
 
 Usage: GITHUB_TOKEN=... python3 snake3d.py <github_user> <out_dir>
 Set SNAKE_DEMO=1 to use random data (no network).
@@ -13,9 +13,15 @@ import urllib.request
 P, S = 14.0, 11.0        # cell pitch / square size
 M = 14.0                 # margin
 STEP = 0.12              # seconds per cell
-SEGMENTS = 16
-SEG_GAP = 0.75           # spacing between segments, in cells
+SEGMENTS = 44            # more segments = smoother, longer body
+SEG_GAP = 0.2            # spacing between segments, in cells (small = continuous tube)
+BODY_R = 4.6             # body thickness (radius)
+HEAD_R = 6.2
 PAUSE = 2.0
+
+# Google Snake colours from head to tail
+HEAD_COLOR = "#4285f4"
+STOPS = [(66, 133, 244), (66, 133, 244), (52, 168, 83), (251, 188, 5), (255, 140, 0), (234, 67, 53)]
 
 THEMES = {
     "light": {"levels": ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]},
@@ -53,6 +59,15 @@ def f(x):
     return f"{x:.1f}"
 
 
+def body_color(t):
+    """t in [0,1]: 0 = neck, 1 = tail tip."""
+    pos = t * (len(STOPS) - 1)
+    a = min(int(pos), len(STOPS) - 2)
+    u = pos - a
+    c = [round(STOPS[a][i] + (STOPS[a + 1][i] - STOPS[a][i]) * u) for i in range(3)]
+    return "#%02x%02x%02x" % tuple(c)
+
+
 def build(weeks, theme):
     lv = THEMES[theme]["levels"]
     empty = lv[0]
@@ -81,22 +96,13 @@ def build(weeks, theme):
     w = out.append
     w(f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" '
       f'viewBox="0 0 {f(width)} {f(height)}" width="{f(width)}" height="{f(height)}">')
-    w('<title>3D snake</title>')
+    w('<title>snake</title>')
     w('<defs>')
     path = " L".join(f"{f(x)},{f(y)}" for x, y in (center(i, j) for i, j in order))
     w(f'<path id="p" d="M{path}" fill="none"/>')
-    for name, c1, c2, c3 in (("gA", "#fde68a", "#f59e0b", "#92400e"),
-                             ("gB", "#fcd34d", "#d97706", "#78350f")):
-        w(f'<radialGradient id="{name}" cx="35%" cy="30%" r="75%">'
-          f'<stop offset="0" stop-color="{c1}"/><stop offset="0.5" stop-color="{c2}"/>'
-          f'<stop offset="1" stop-color="{c3}"/></radialGradient>')
-    w('<radialGradient id="gH" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#fef3c7"/>'
-      '<stop offset="0.45" stop-color="#f59e0b"/><stop offset="1" stop-color="#7c2d12"/></radialGradient>')
     w('</defs>')
 
-    # Flat board
-    for k, (i, j) in enumerate(order):
-        pass
+    # Board
     eaten = {c: k for k, c in enumerate(order)}
     for (i, j), lvl in sorted(cells.items()):
         x, y = M + i * P, M + j * P
@@ -121,33 +127,16 @@ def build(weeks, theme):
         return (f'<animateMotion dur="{total:.2f}s" repeatCount="indefinite" calcMode="linear" '
                 f'keyPoints="{kps}" keyTimes="{kts}"{rot}><mpath xlink:href="#p"/></animateMotion>')
 
-    def radius(k):
-        return 5.2 * (1 - 0.58 * (k / (SEGMENTS - 1)) ** 1.1)
-
-    # Shadows
-    for k in range(SEGMENTS - 1, -1, -1):
-        r = 6.2 if k == 0 else radius(k)
-        w(f'<g><ellipse cx="1.5" cy="3" rx="{f(r)}" ry="{f(r*0.8)}" fill="#000" opacity="0.3"/>{motion(k)}</g>')
-
-    # Body (tail -> neck)
+    # Body: many overlapping circles = one smooth, thick, rounded tube (tail -> neck)
     for k in range(SEGMENTS - 1, 0, -1):
-        r = radius(k)
-        g = "gA" if k % 2 else "gB"
-        spot = (f'<ellipse cx="0" cy="0" rx="{f(r*0.5)}" ry="{f(r*0.5)}" fill="#451a03" opacity="0.45"/>'
-                if k % 2 == 0 else "")
-        w(f'<g><circle r="{f(r)}" fill="url(#{g})"/>{spot}'
-          f'<ellipse cx="{f(-r*0.3)}" cy="{f(-r*0.4)}" rx="{f(r*0.38)}" ry="{f(r*0.22)}" fill="#fff" opacity="0.4"/>'
-          f'{motion(k)}</g>')
+        col = body_color(k / (SEGMENTS - 1))
+        w(f'<circle r="{f(BODY_R)}" fill="{col}">{motion(k)}</circle>')
 
-    # Head (rotates along the path)
+    # Head (blue, white eyes, rotates along the path)
     w('<g>'
-      '<ellipse cx="0" cy="0" rx="7.4" ry="5.6" fill="url(#gH)"/>'
-      '<ellipse cx="-1.5" cy="-3.2" rx="2.8" ry="1.2" fill="#fff" opacity="0.4"/>'
-      '<circle cx="2.4" cy="-2.8" r="1.7" fill="#fff"/><circle cx="2.4" cy="2.8" r="1.7" fill="#fff"/>'
-      '<ellipse cx="2.8" cy="-2.8" rx="0.55" ry="1.25" fill="#111"/><ellipse cx="2.8" cy="2.8" rx="0.55" ry="1.25" fill="#111"/>'
-      '<g stroke="#ef4444" stroke-width="0.9" stroke-linecap="round" fill="none">'
-      '<path d="M7.2,0 L11.5,0 M11.5,0 L13.8,-1.8 M11.5,0 L13.8,1.8"/>'
-      '<animate attributeName="opacity" values="1;1;0;1" keyTimes="0;0.5;0.6;1" dur="0.9s" repeatCount="indefinite"/></g>'
+      f'<ellipse cx="0" cy="0" rx="{f(HEAD_R)}" ry="{f(HEAD_R - 0.4)}" fill="{HEAD_COLOR}"/>'
+      '<circle cx="2.2" cy="-2.9" r="2.1" fill="#fff"/><circle cx="2.2" cy="2.9" r="2.1" fill="#fff"/>'
+      '<circle cx="2.9" cy="-2.9" r="1.0" fill="#1f2937"/><circle cx="2.9" cy="2.9" r="1.0" fill="#1f2937"/>'
       f'{motion(0, rotate=True)}</g>')
 
     w('</svg>')
