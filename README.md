@@ -100,9 +100,8 @@
 
 <div align="center">
 
-<!-- Create your counter at https://flagcounter.com then replace YOUR_ID -->
-<a href="https://info.flagcounter.com/YOUR_ID">
-<img src="https://s01.flagcounter.com/count2/YOUR_ID/bg_0D1117/txt_FFFFFF/border_0D1117/columns_8/maxflags_40/viewers_Unique+Views+Per+Country/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter"/>
+<a href="https://s05.flagcounter.com/more/Kx8D">
+<img src="https://s05.flagcounter.com/count2/Kx8D/bg_0D1117/txt_FFFFFF/border_0D1117/columns_8/maxflags_40/viewers_Unique+Views+Per+Country/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter"/>
 </a>
 
 </div>
