@@ -1,77 +1,137 @@
+
 <div align="center">
 
-<img src="./assets/header.svg" width="100%" alt="Ahmed Reda - Flutter Developer | Dart | Mobile App Development"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:0F2027,50:203A43,100:2C5364&text=Ahmed%20Reda&fontSize=58&fontColor=ffffff&fontAlignY=38&desc=Flutter%20Developer%20%7C%20Dart%20%7C%20Mobile%20App%20Development&descAlignY=60&descSize=18&animation=fadeIn" width="100%" alt="Ahmed Reda Banner"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=900&color=00F5FF&center=true&vCenter=true&width=820&height=50&lines=Welcome+to+my+GitHub+profile%21+%F0%9F%91%8B;Passionate+about+modern%2C+scalable+%26+user-friendly+apps+%F0%9F%93%B1;Turning+ideas+into+practical+applications+%E2%9C%A8;Clean+code+%E2%80%A2+Good+architecture+%E2%80%A2+Maintainable+solutions+%F0%9F%8F%97%EF%B8%8F" alt="typing intro"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&duration=2600&pause=800&color=36BCF7&center=true&vCenter=true&width=850&height=55&lines=Hey%2C+I'm+Ahmed+%F0%9F%91%8B;Flutter+%26+Dart+Developer+%F0%9F%93%B1;Building+clean%2C+scalable+mobile+apps;Turning+ideas+into+real+products+%E2%9C%A8;Always+Learning.+Always+Building." alt="Typing introduction"/>
 
-<img src="https://komarev.com/ghpvc/?username=ahmedreda376&label=Profile%20Views&color=blueviolet&style=for-the-badge" alt="views"/>
-<img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"/>
-<img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart"/>
-<img src="https://img.shields.io/badge/Open%20to-Opportunities-brightgreen?style=for-the-badge" alt="Open to opportunities"/>
+<p>
+<img src="https://komarev.com/ghpvc/?username=ahmedreda376&style=for-the-badge&color=0e7490&label=PROFILE+VIEWS" alt="Profile views"/>
+<img src="https://img.shields.io/badge/Focus-Flutter%20Development-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"/>
+<img src="https://img.shields.io/badge/Language-Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart"/>
+</p>
 
-<img src="./assets/divider.svg" width="100%" alt=""/>
+</div>
 
-<img src="./assets/about.svg" width="100%" alt="About Me: Flutter and Dart developer, OOP, BLoC Cubit Provider, HTTP and Dio, Firebase and Supabase, Hive and SharedPreferences, Clean Architecture and SOLID"/>
+---
 
-<img src="./assets/divider.svg" width="100%" alt=""/>
+## 👨‍💻 About Me
 
-<img src="./assets/h_sanad.svg" width="100%" alt="Featured Project"/>
-<img src="./assets/sanad.svg" width="100%" alt="Sanad - Home Maintenance Services App. A service marketplace that connects customers with professional technicians to request and manage home maintenance services."/>
-<img src="./assets/features.svg" width="100%" alt="Key features: authentication and registration, OTP phone verification, automatic location detection, address management, customer and provider roles, request management, Arabic and English localization, responsive UI, Supabase backend, Cubit/BLoC"/>
-<img src="./assets/categories.svg" width="100%" alt="Electrical, Plumbing, Carpentry, Gas and other home maintenance services"/>
+- I'm **Ahmed Reda**, a Flutter developer passionate about building useful and user-friendly mobile applications.
+- I enjoy turning ideas into clean, maintainable, and responsive Flutter experiences.
+- I work with **Dart, Flutter, BLoC/Cubit, Provider, REST APIs, Firebase, and Supabase**.
+- I care about readable code, thoughtful architecture, and continuous improvement.
+- Currently deepening my knowledge of **Clean Architecture, testing, and advanced Flutter development**.
 
-```mermaid
-flowchart LR
-    A[📱 Customer] -->|Requests service| B[(☁️ Supabase)]
-    B -->|Notifies| C[🔧 Technician]
-    C -->|Accepts job| B
-    B -->|Updates status| A
-```
+---
 
-<img src="./assets/divider.svg" width="100%" alt=""/>
+## 🧰 Tech Stack
 
-<img src="./assets/h_tech.svg" width="100%" alt="Tech Stack"/>
-<img src="./assets/marquee.svg" width="100%" alt="Flutter, Dart, BLoC, Cubit, Provider, REST API, Dio, HTTP, Firebase, Supabase, Hive, SharedPreferences, OOP, SOLID, Clean Architecture, Git, GitHub, VS Code"/>
+<div align="center">
+
+### Mobile Development
+
+<img src="https://skillicons.dev/icons?i=flutter,dart,androidstudio&theme=dark" alt="Flutter Dart Android Studio"/>
+
+### Backend, Storage & APIs
+
+<img src="https://skillicons.dev/icons?i=firebase,supabase,postman&theme=dark" alt="Firebase Supabase Postman"/>
+
+### Tools
+
+<img src="https://skillicons.dev/icons?i=git,github,vscode,figma&theme=dark" alt="Git GitHub VS Code Figma"/>
+
+</div>
+
+<details>
+<summary><b>More about my development toolkit</b></summary>
+
+- **State Management:** BLoC, Cubit, Provider
+- **Networking:** REST APIs, HTTP, Dio
+- **Local Storage:** Hive, SharedPreferences
+- **Concepts:** OOP, SOLID principles, Clean Architecture
+- **Workflow:** Git, GitHub, debugging, responsive UI
+
+</details>
+
+---
+
+## 📊 GitHub Dashboard
+
+<div align="center">
+
+<a href="https://github.com/ahmedreda376">
+<img height="180" src="https://github-readme-stats.vercel.app/api?username=ahmedreda376&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&rank_icon=github&border_radius=14" alt="GitHub stats"/>
+</a>
+
+<a href="https://github.com/ahmedreda376">
+<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmedreda376&layout=compact&theme=tokyonight&hide_border=true&border_radius=14" alt="Most used languages"/>
+</a>
+
 <br/>
-<img src="https://skillicons.dev/icons?i=flutter,dart,firebase,supabase,git,github,vscode,figma,androidstudio&theme=dark&perline=9" alt="skills"/>
 
-<img src="./assets/divider.svg" width="100%" alt=""/>
+<img src="https://streak-stats.demolab.com?user=ahmedreda376&theme=tokyonight&hide_border=true&border_radius=14" alt="GitHub contribution streak"/>
 
-<img src="./assets/h_stats.svg" width="100%" alt="GitHub Stats"/>
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=ahmedreda376&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&border_radius=15" alt="stats"/>
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmedreda376&layout=compact&theme=tokyonight&hide_border=true&border_radius=15" alt="top languages"/>
 <br/>
-<img src="https://streak-stats.demolab.com?user=ahmedreda376&theme=tokyonight&hide_border=true&border_radius=15" alt="streak"/>
-<br/>
-<img src="https://github-profile-trophy.vercel.app/?username=ahmedreda376&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=7&margin-w=10" alt="trophies"/>
 
-<img src="./assets/h_activity.svg" width="100%" alt="Contribution Activity"/>
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=ahmedreda376&theme=tokyo-night&hide_border=true&area=true&radius=10" width="100%" alt="activity graph"/>
+<img src="https://github-profile-trophy.vercel.app/?username=ahmedreda376&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6&margin-w=8" width="100%" alt="GitHub trophies"/>
 
-<img src="./assets/h_snake.svg" width="100%" alt="Contribution Snake"/>
+</div>
+
+---
+
+## 📈 Contribution Activity
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=ahmedreda376&bg_color=1a1b27&color=70a5fd&line=bf91f3&point=ffffff&area=true&hide_border=true&radius=12" width="100%" alt="GitHub activity graph"/>
+
+### 🐍 Contribution Snake
+
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ahmedreda376/ahmedreda376/output/github-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ahmedreda376/ahmedreda376/output/github-snake.svg"/>
-  <img alt="snake animation" src="https://raw.githubusercontent.com/ahmedreda376/ahmedreda376/output/github-snake-dark.svg" width="100%"/>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ahmedreda376/ahmedreda376/output/github-snake-dark.svg"/>
+<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ahmedreda376/ahmedreda376/output/github-snake.svg"/>
+<img alt="Contribution Snake Animation" src="https://raw.githubusercontent.com/ahmedreda376/ahmedreda376/output/github-snake-dark.svg" width="100%"/>
 </picture>
 
-<img src="./assets/divider.svg" width="100%" alt=""/>
+</div>
 
-<img src="./assets/learning.svg" width="100%" alt="Currently learning: Advanced Clean Architecture, Unit and Widget Testing, Dependency Injection (GetIt), Design Patterns, CI/CD, Performance Optimization, Advanced Flutter Development"/>
+---
 
-<img src="./assets/goals.svg" width="100%" alt="Goals: build production-ready apps, publish on Google Play Store, improve engineering and problem-solving, contribute to open source, grow as a professional Flutter developer"/>
+## 🌱 Currently Learning
 
-<img src="./assets/divider.svg" width="100%" alt=""/>
+- Advanced Flutter architecture and scalable project structure.
+- Unit and widget testing.
+- Dependency injection and design patterns.
+- Performance optimization and CI/CD workflows.
 
-<img src="./assets/h_connect.svg" width="100%" alt="Connect With Me"/>
+---
 
-<a href="https://github.com/ahmedreda376"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-<a href="https://www.linkedin.com/in/ahmed-reda-67575a3aa"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+## 🎯 Goals
+
+- Build and publish production-ready mobile applications.
+- Become a stronger problem solver and software engineer.
+- Contribute to open-source projects.
+- Keep learning and sharing what I build.
+
+---
+
+## 🤝 Let's Connect
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/ahmed-reda-67575a3aa">
+<img src="https://img.shields.io/badge/LinkedIn-Connect%20with%20me-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+
+<a href="https://github.com/ahmedreda376">
+<img src="https://img.shields.io/badge/GitHub-Follow%20me-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+</a>
 
 <br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=900&color=36BCF7&center=true&vCenter=true&width=500&height=45&lines=%E2%AD%90+Always+Learning.+Always+Building.;Thanks+for+visiting%21+%F0%9F%92%99" alt="footer typing"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=17&duration=2800&pause=900&color=36BCF7&center=true&vCenter=true&width=650&height=45&lines=Thanks+for+visiting+my+profile!;Let's+build+something+great+together." alt="Animated closing message"/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%" alt=""/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2C5364,50:203A43,100:0F2027&height=120&section=footer" width="100%" alt="Footer wave"/>
 
 </div>
