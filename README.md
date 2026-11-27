@@ -51,7 +51,11 @@
 
 <br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=ahmedreda376&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6&margin-w=8" width="100%" alt="GitHub trophies"/>
+<img src="https://img.shields.io/badge/Now%20Learning-Clean%20Architecture-7F00FF?style=for-the-badge&logo=flutter&logoColor=white" alt="Now learning Clean Architecture"/>
+<img src="https://img.shields.io/badge/Next-Unit%20%26%20Widget%20Testing-3A47D5?style=for-the-badge&logo=dart&logoColor=white" alt="Next: testing"/>
+<br/>
+<img src="https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI/CD with GitHub Actions"/>
+<img src="https://img.shields.io/badge/Goal-Google%20Play%20Store-00D2FF?style=for-the-badge&logo=googleplay&logoColor=white" alt="Goal: publish on Google Play"/>
 
 </div>
 
