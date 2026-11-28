@@ -34,6 +34,23 @@
 
 </div>
 
+<img src="https://capsule-render.vercel.app/api?type=waving&height=110&color=0:7F00FF,50:3A47D5,100:00D2FF&text=Featured%20Projects&fontSize=36&fontColor=ffffff&fontAlignY=42&animation=fadeIn" width="100%" alt="Featured Projects"/>
+
+<details open>
+<summary><h3>📁 My Repositories</h3></summary>
+
+<div align="center">
+
+<a href="https://github.com/ahmedreda376/Firebase-Auth"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ahmedreda376&repo=Firebase-Auth&theme=tokyonight&hide_border=true" alt="Firebase-Auth"/></a>
+<a href="https://github.com/ahmedreda376/Notes-App-Supabase"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ahmedreda376&repo=Notes-App-Supabase&theme=tokyonight&hide_border=true" alt="Notes-App-Supabase"/></a>
+<br/>
+<a href="https://github.com/ahmedreda376/Food-Delivery-App"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ahmedreda376&repo=Food-Delivery-App&theme=tokyonight&hide_border=true" alt="Food-Delivery-App"/></a>
+<a href="https://github.com/ahmedreda376/Localization"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ahmedreda376&repo=Localization&theme=tokyonight&hide_border=true" alt="Localization"/></a>
+
+</div>
+
+</details>
+
 <img src="https://capsule-render.vercel.app/api?type=waving&height=110&color=0:7F00FF,50:3A47D5,100:00D2FF&text=GitHub%20Dashboard&fontSize=36&fontColor=ffffff&fontAlignY=42&animation=fadeIn" width="100%" alt="GitHub Dashboard"/>
 
 <div align="center">
@@ -112,21 +129,6 @@
 <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Random dev quote"/>
 
 </div>
-
-<details>
-<summary><h3>📁 More Repositories</h3></summary>
-
-<div align="center">
-
-<!-- Replace REPO_1 / REPO_2 ... with your repo names -->
-<a href="https://github.com/ahmedreda376/REPO_1"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ahmedreda376&repo=REPO_1&theme=tokyonight&hide_border=true" alt="REPO_1"/></a>
-<a href="https://github.com/ahmedreda376/REPO_2"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ahmedreda376&repo=REPO_2&theme=tokyonight&hide_border=true" alt="REPO_2"/></a>
-<a href="https://github.com/ahmedreda376/REPO_3"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ahmedreda376&repo=REPO_3&theme=tokyonight&hide_border=true" alt="REPO_3"/></a>
-<a href="https://github.com/ahmedreda376/REPO_4"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ahmedreda376&repo=REPO_4&theme=tokyonight&hide_border=true" alt="REPO_4"/></a>
-
-</div>
-
-</details>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&height=110&color=0:7F00FF,50:3A47D5,100:00D2FF&text=Let%27s%20Connect&fontSize=36&fontColor=ffffff&fontAlignY=42&animation=fadeIn" width="100%" alt="Let's Connect"/>
 
