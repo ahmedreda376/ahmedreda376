@@ -16,12 +16,14 @@ from collections import deque
 
 P, S = 14.0, 11.0        # cell pitch / square size
 M = 14.0                 # margin
-STEP = 0.12              # seconds per cell
+STEP = 0.28              # seconds per cell (bigger = slower snake)
 SEGMENTS = 44            # more segments = smoother, longer body
 SEG_GAP = 0.2            # spacing between segments, in cells (small = continuous tube)
 BODY_R = 4.6             # body thickness (radius)
 HEAD_R = 6.2
 PAUSE = 2.0
+BODY_CELLS = int((SEGMENTS - 1) * SEG_GAP) + 1   # grid cells the snake occupies
+MIN_FREE = 15            # keep at least this much free room after each meal (avoid traps)
 
 # Google Snake colours from head to tail
 HEAD_COLOR = "#4285f4"
@@ -73,95 +75,88 @@ def body_color(t):
 
 
 # ---------------------------------------------------------------- path planning
-def dist(a, b):
-    return abs(a[0] - b[0]) + abs(a[1] - b[1])
+DIRS = ((1, 0), (0, 1), (0, -1), (-1, 0))
 
 
-def plan_tour(cells):
-    """Order in which to visit the contribution squares (short open tour)."""
-    start = (0, min(j for (i, j) in cells if i == 0))
-    remaining = {c for c, lvl in cells.items() if lvl > 0}
-    remaining.discard(start)
-
-    # 1) nearest neighbour (ties: prefer left/top so it drifts left -> right)
-    tour, cur = [start], start
-    while remaining:
-        nxt = min(remaining, key=lambda t: (dist(cur, t), t[0], t[1]))
-        tour.append(nxt)
-        remaining.discard(nxt)
-        cur = nxt
-
-    # 2) 2-opt: reverse segments while it shortens the total route (start stays fixed)
-    n = len(tour)
-    improved, rounds = True, 0
-    while improved and rounds < 50:
-        improved = False
-        rounds += 1
-        for i in range(1, n - 1):
-            for j in range(i + 1, n):
-                a, b = tour[i - 1], tour[i]
-                c = tour[j]
-                d = tour[j + 1] if j + 1 < n else None
-                old = dist(a, b) + (dist(c, d) if d else 0)
-                new = dist(a, c) + (dist(b, d) if d else 0)
-                if new < old:
-                    tour[i:j + 1] = reversed(tour[i:j + 1])
-                    improved = True
-    return start, tour
-
-
-def bfs_route(cells, a, b):
-    """Shortest route through existing cells (fallback)."""
-    prev = {a: None}
-    q = deque([a])
+def free_region(cells, head, body):
+    """How many cells the head can still reach without crossing the body."""
+    seen, q = {head}, deque([head])
     while q:
-        cur = q.popleft()
-        if cur == b:
-            break
-        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
-            nb = (cur[0] + dx, cur[1] + dy)
-            if nb in cells and nb not in prev:
-                prev[nb] = cur
+        c = q.popleft()
+        for dx, dy in DIRS:
+            nb = (c[0] + dx, c[1] + dy)
+            if nb in cells and nb not in body and nb not in seen:
+                seen.add(nb)
                 q.append(nb)
-    route, cur = [], b
-    while cur != a:
-        route.append(cur)
-        cur = prev[cur]
-    return route[::-1]
+    return len(seen)
 
 
-def l_route(cells, a, b, horizontal_first):
-    """L-shaped route a -> b (excluding a). None if it leaves the board."""
-    route, (x, y) = [], a
-    legs = ("x", "y") if horizontal_first else ("y", "x")
-    for leg in legs:
-        if leg == "x":
-            while x != b[0]:
-                x += 1 if b[0] > x else -1
-                route.append((x, y))
-        else:
-            while y != b[1]:
-                y += 1 if b[1] > y else -1
-                route.append((x, y))
-    return route if all(c in cells for c in route) else None
+def find_route(cells, path, left, min_free):
+    """Shortest route from the head to the nearest uneaten square that never touches the body.
+
+    The body is the last BODY_CELLS cells of the path, so the snake can't cross itself
+    or turn back 180 degrees - exactly like the real game.
+    """
+    hist = path[-BODY_CELLS:]
+    nodes = [(path[-1], -1)]                 # (cell, parent index)
+    q, seen = deque([0]), {(path[-1], None)}
+    while q:
+        idx = q.popleft()
+        cell = nodes[idx][0]
+        chain, k = [], idx                   # most recent cell first
+        while k != -1 and len(chain) < BODY_CELLS:
+            chain.append(nodes[k][0])
+            k = nodes[k][1]
+        if len(chain) < BODY_CELLS:
+            chain += hist[:-1][::-1][:BODY_CELLS - len(chain)]
+        if idx != 0 and cell in left:
+            if free_region(cells, cell, set(chain)) >= min_free:
+                route, k = [], idx
+                while k != 0:
+                    route.append(nodes[k][0])
+                    k = nodes[k][1]
+                return route[::-1]
+        body = set(chain)
+        for d in DIRS:
+            nb = (cell[0] + d[0], cell[1] + d[1])
+            if nb in cells and nb not in body and (nb, d) not in seen:
+                seen.add((nb, d))
+                nodes.append((nb, idx))
+                q.append(len(nodes) - 1)
+    return None
+
+
+def wander_step(cells, path):
+    """No route to food right now: take the safest single step."""
+    body = set(path[-BODY_CELLS:])
+    best, best_room = None, -1
+    for d in DIRS:
+        nb = (path[-1][0] + d[0], path[-1][1] + d[1])
+        if nb in cells and nb not in body:
+            room = free_region(cells, nb, body | {nb})
+            if room > best_room:
+                best, best_room = nb, room
+    return best
 
 
 def build_path(cells):
-    start, tour = plan_tour(cells)
-    path, seen = [start], {start}
-    for target in tour[1:]:
-        if target in seen:          # already eaten on the way
-            continue
-        cands = [r for r in (l_route(cells, path[-1], target, True),
-                             l_route(cells, path[-1], target, False)) if r]
-        if not cands:
-            cands = [bfs_route(cells, path[-1], target)]
-        # choose the L-shape that eats more squares on the way
-        route = max(cands, key=lambda r: sum(1 for c in r if c not in seen and cells[c] > 0))
+    start = (0, min(j for (i, j) in cells if i == 0))
+    path = [start]
+    left = {c for c, lvl in cells.items() if lvl > 0}
+    left.discard(start)
+    wander = 0
+    while left and wander < 300:
+        route = (find_route(cells, path, left, MIN_FREE)
+                 or find_route(cells, path, left, 0))
+        if route is None:
+            nxt = wander_step(cells, path)
+            if nxt is None:
+                break
+            route, wander = [nxt], wander + 1
         for c in route:
             path.append(c)
-            seen.add(c)
-    if len(path) < 2:               # nothing to eat: take one step so the animation is valid
+            left.discard(c)
+    if len(path) < 2:                        # nothing to eat: one step so the animation is valid
         nb = next((c for c in ((start[0] + 1, start[1]), (start[0], start[1] + 1)) if c in cells), start)
         path.append(nb)
     return path
@@ -206,7 +201,7 @@ def build(weeks, theme):
     for (i, j), lvl in sorted(cells.items()):
         x, y = M + i * P, M + j * P
         col = lv[lvl]
-        if lvl == 0:
+        if lvl == 0 or (i, j) not in eaten:
             w(f'<rect x="{f(x)}" y="{f(y)}" width="{S}" height="{S}" rx="2" fill="{col}"/>')
         else:
             tk = (eaten[(i, j)] * STEP) / total
