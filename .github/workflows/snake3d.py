@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """GitHub contribution board + Google-Snake-style animated snake (rainbow body, blue head).
 
+The snake takes the shortest route to eat every contribution square (nearest-neighbour
+tour improved with 2-opt) instead of sweeping the whole board column by column.
+
 Usage: GITHUB_TOKEN=... python3 snake3d.py <github_user> <out_dir>
 Set SNAKE_DEMO=1 to use random data (no network).
 """
@@ -9,6 +12,7 @@ import os
 import random
 import sys
 import urllib.request
+from collections import deque
 
 P, S = 14.0, 11.0        # cell pitch / square size
 M = 14.0                 # margin
@@ -68,6 +72,102 @@ def body_color(t):
     return "#%02x%02x%02x" % tuple(c)
 
 
+# ---------------------------------------------------------------- path planning
+def dist(a, b):
+    return abs(a[0] - b[0]) + abs(a[1] - b[1])
+
+
+def plan_tour(cells):
+    """Order in which to visit the contribution squares (short open tour)."""
+    start = (0, min(j for (i, j) in cells if i == 0))
+    remaining = {c for c, lvl in cells.items() if lvl > 0}
+    remaining.discard(start)
+
+    # 1) nearest neighbour (ties: prefer left/top so it drifts left -> right)
+    tour, cur = [start], start
+    while remaining:
+        nxt = min(remaining, key=lambda t: (dist(cur, t), t[0], t[1]))
+        tour.append(nxt)
+        remaining.discard(nxt)
+        cur = nxt
+
+    # 2) 2-opt: reverse segments while it shortens the total route (start stays fixed)
+    n = len(tour)
+    improved, rounds = True, 0
+    while improved and rounds < 50:
+        improved = False
+        rounds += 1
+        for i in range(1, n - 1):
+            for j in range(i + 1, n):
+                a, b = tour[i - 1], tour[i]
+                c = tour[j]
+                d = tour[j + 1] if j + 1 < n else None
+                old = dist(a, b) + (dist(c, d) if d else 0)
+                new = dist(a, c) + (dist(b, d) if d else 0)
+                if new < old:
+                    tour[i:j + 1] = reversed(tour[i:j + 1])
+                    improved = True
+    return start, tour
+
+
+def bfs_route(cells, a, b):
+    """Shortest route through existing cells (fallback)."""
+    prev = {a: None}
+    q = deque([a])
+    while q:
+        cur = q.popleft()
+        if cur == b:
+            break
+        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            nb = (cur[0] + dx, cur[1] + dy)
+            if nb in cells and nb not in prev:
+                prev[nb] = cur
+                q.append(nb)
+    route, cur = [], b
+    while cur != a:
+        route.append(cur)
+        cur = prev[cur]
+    return route[::-1]
+
+
+def l_route(cells, a, b, horizontal_first):
+    """L-shaped route a -> b (excluding a). None if it leaves the board."""
+    route, (x, y) = [], a
+    legs = ("x", "y") if horizontal_first else ("y", "x")
+    for leg in legs:
+        if leg == "x":
+            while x != b[0]:
+                x += 1 if b[0] > x else -1
+                route.append((x, y))
+        else:
+            while y != b[1]:
+                y += 1 if b[1] > y else -1
+                route.append((x, y))
+    return route if all(c in cells for c in route) else None
+
+
+def build_path(cells):
+    start, tour = plan_tour(cells)
+    path, seen = [start], {start}
+    for target in tour[1:]:
+        if target in seen:          # already eaten on the way
+            continue
+        cands = [r for r in (l_route(cells, path[-1], target, True),
+                             l_route(cells, path[-1], target, False)) if r]
+        if not cands:
+            cands = [bfs_route(cells, path[-1], target)]
+        # choose the L-shape that eats more squares on the way
+        route = max(cands, key=lambda r: sum(1 for c in r if c not in seen and cells[c] > 0))
+        for c in route:
+            path.append(c)
+            seen.add(c)
+    if len(path) < 2:               # nothing to eat: take one step so the animation is valid
+        nb = next((c for c in ((start[0] + 1, start[1]), (start[0], start[1] + 1)) if c in cells), start)
+        path.append(nb)
+    return path
+
+
+# ---------------------------------------------------------------- svg
 def build(weeks, theme):
     lv = THEMES[theme]["levels"]
     empty = lv[0]
@@ -83,12 +183,9 @@ def build(weeks, theme):
     def center(i, j):
         return M + i * P + S / 2, M + j * P + S / 2
 
-    order = []
-    for i in range(n_weeks):
-        js = sorted(j for (ii, j) in cells if ii == i)
-        order += [(i, j) for j in (js if i % 2 == 0 else reversed(js))]
+    order = build_path(cells)
     n = len(order)
-    T = n * STEP
+    T = (n - 1) * STEP
     D = (SEGMENTS - 1) * SEG_GAP * STEP
     total = T + D + PAUSE
 
@@ -102,8 +199,10 @@ def build(weeks, theme):
     w(f'<path id="p" d="M{path}" fill="none"/>')
     w('</defs>')
 
-    # Board
-    eaten = {c: k for k, c in enumerate(order)}
+    # Board: a square disappears the first time the head reaches it
+    eaten = {}
+    for k, c in enumerate(order):
+        eaten.setdefault(c, k)
     for (i, j), lvl in sorted(cells.items()):
         x, y = M + i * P, M + j * P
         col = lv[lvl]
@@ -140,7 +239,7 @@ def build(weeks, theme):
       f'{motion(0, rotate=True)}</g>')
 
     w('</svg>')
-    return "\n".join(out)
+    return "\n".join(out), n
 
 
 def main():
@@ -149,9 +248,10 @@ def main():
     os.makedirs(out_dir, exist_ok=True)
     weeks = demo() if os.environ.get("SNAKE_DEMO") else fetch(user, os.environ["GITHUB_TOKEN"])
     for theme, name in (("light", "github-snake.svg"), ("dark", "github-snake-dark.svg")):
+        svg, steps = build(weeks, theme)
         with open(os.path.join(out_dir, name), "w") as fh:
-            fh.write(build(weeks, theme))
-        print("wrote", name)
+            fh.write(svg)
+        print("wrote", name, f"({steps} steps)")
 
 
 if __name__ == "__main__":
