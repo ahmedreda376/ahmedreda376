@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """GitHub contribution board + Google-Snake-style animated snake (rainbow body, blue head).
 
-The snake takes the shortest route to eat every contribution square (nearest-neighbour
-tour improved with 2-opt) instead of sweeping the whole board column by column.
+The snake always heads for the nearest contribution square by the shortest safe route.
+It never crosses its own body or turns back 180 degrees, like the real game.
 
 Usage: GITHUB_TOKEN=... python3 snake3d.py <github_user> <out_dir>
 Set SNAKE_DEMO=1 to use random data (no network).
@@ -16,7 +16,7 @@ from collections import deque
 
 P, S = 14.0, 11.0        # cell pitch / square size
 M = 14.0                 # margin
-STEP = 0.28              # seconds per cell (bigger = slower snake)
+STEP = 0.22              # seconds per cell (bigger = slower snake)
 SEGMENTS = 44            # more segments = smoother, longer body
 SEG_GAP = 0.2            # spacing between segments, in cells (small = continuous tube)
 BODY_R = 4.6             # body thickness (radius)
