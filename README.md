@@ -34,6 +34,12 @@
 
 </div>
 
+<img src="https://capsule-render.vercel.app/api?type=waving&height=110&color=0:7F00FF,50:3A47D5,100:00D2FF&text=Under%20The%20Hood&fontSize=36&fontColor=ffffff&fontAlignY=42&animation=fadeIn" width="100%" alt="Under The Hood"/>
+
+<div align="center">
+<img src="./images/flutter-widget-tree.svg" width="100%" alt="Animated Flutter widget tree: MaterialApp, Scaffold, AppBar, ListView, FAB and FoodCard build themselves while a phone UI and the Dart code appear in sync"/>
+</div>
+
 <img src="https://capsule-render.vercel.app/api?type=waving&height=110&color=0:7F00FF,50:3A47D5,100:00D2FF&text=GitHub%20Dashboard&fontSize=36&fontColor=ffffff&fontAlignY=42&animation=fadeIn" width="100%" alt="GitHub Dashboard"/>
 
 <div align="center">
